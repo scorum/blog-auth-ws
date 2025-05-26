@@ -1,0 +1,22 @@
+module.exports = {
+  com: 'en-us',
+  me: 'ru-ru',
+  ru: 'ru-ru',
+  net: 'zh-cn',
+  es: 'es-es',
+  kr: 'ko-kr',
+  in: 'en-in',
+  tc: 'tr-tr',
+  fr: 'fr-fr',
+  it: 'it-it',
+  'com.ua': 'uk-ua',
+  pl: 'pl-pl',
+  ba: 'ba-ba',
+  ph: 'en-ph',
+  de: 'de-de',
+  'com.nl': 'nl-nl',
+  id: 'id-id',
+  vn: 'vi-vn',
+  ro: 'ro-ro',
+  africa: 'en-africa'
+};

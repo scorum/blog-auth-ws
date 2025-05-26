@@ -1,0 +1,84 @@
+exports.HEALTH_STATUSES = {
+  OK: 'ok',
+  FAIL: 'fail'
+};
+
+exports.ERROR_CODES = {
+  SERVER_ERROR: '001',
+
+  REQUEST_VALIDATION_ERROR: '101',
+  REQUEST_INVALID_PRIVATE_UUID: '102',
+  REQUEST_PHONE_ALREADY_EXIST: '103',
+  REQUEST_INVALID_ACCESS_TOKEN: '104',
+  REQUEST_EMAIL_ALREADY_EXIST: '105',
+  REQUEST_ACCOUNT_NOT_FOUND: '106',
+  REQUEST_INVALID_REG_TOKEN: '107',
+  REQUEST_USERNAME_ALREADY_EXIST: '108',
+  REQUEST_ERROR_FROM_BLOCKCHAIN: '109',
+  REQUEST_ACCOUNT_ALREADY_EXIST: '110',
+  REQUEST_INVALID_SMS_CODE: '111',
+  REQUEST_INVALID_PHONE_NUMBER: '112',
+  REQUEST_ERROR_FROM_SMS_SERVICE: '113',
+  REQUEST_INVALID_CAPTCHA: '114',
+  REQUEST_SMS_ATTEMTS_REACHED: '115',
+  REQUEST_CHANGE_PHONE_ATTEMTS_REACHED: '116',
+  REQUEST_INVALID_USERNAME: '117',
+  REQUEST_PHONE_ALREADY_HAVE: '118',
+  REQUEST_EMAIL_NOT_EXIST: '119',
+  REQUEST_PHONE_ALREADY_VERIFIED: '120',
+  REQUEST_ACCOUNT_NOT_HAVE_EMAIL: '121',
+  REQUEST_ACCOUNT_NOT_HAVE_PHONE: '122',
+  REQUEST_ACCOUNT_NOT_HAVE_REG_TOKEN: '123',
+  REQUEST_ERROR_FROM_EMAIL_SERVICE: '124',
+  REQUEST_ERROR_DELEGATION_FROM_BLOCKCHAIN: '125'
+};
+
+exports.ERROR_MESSAGES = {
+  SERVER_ERROR: 'there was a problem with handling your request, please try again later',
+
+  REQUEST_INVALID_PRIVATE_UUID: 'invalid project id',
+  REQUEST_PHONE_ALREADY_EXIST: 'Phone number already exists',
+  REQUEST_INVALID_ACCESS_TOKEN: 'Check Access Token',
+  REQUEST_EMAIL_ALREADY_EXIST: 'Email Already exists',
+  REQUEST_ACCOUNT_NOT_FOUND: 'Account not registered',
+  REQUEST_INVALID_REG_TOKEN: 'Check reg token',
+  REQUEST_USERNAME_ALREADY_EXIST: 'Username is not unique.',
+  REQUEST_ERROR_FROM_BLOCKCHAIN: 'Something wrong from blockchain.',
+  REQUEST_SMS_ATTEMTS_REACHED: 'Attempts to send SMS reached the limit',
+  REQUEST_CHANGE_PHONE_ATTEMTS_REACHED: 'Attempts to change phone number reached the limit',
+  REQUEST_ACCOUNT_ALREADY_EXIST: 'Account already registered',
+  REQUEST_INVALID_SMS_CODE: 'Check code',
+  REQUEST_INVALID_PHONE_NUMBER: 'Check phone number',
+  REQUEST_ERROR_FROM_SMS_SERVICE: 'Error from sms service',
+  REQUEST_INVALID_CAPTCHA: 'Check captcha',
+  REQUEST_INVALID_USERNAME: 'Invalid username format',
+  REQUEST_PHONE_ALREADY_HAVE: 'You already have phone',
+  REQUEST_EMAIL_NOT_EXIST: 'Email not exist',
+  REQUEST_PHONE_ALREADY_VERIFIED: 'Phone already verified',
+  REQUEST_ACCOUNT_NOT_HAVE_EMAIL: 'Account does not have email',
+  REQUEST_ACCOUNT_NOT_HAVE_PHONE: 'Account does not have a phone number',
+  REQUEST_ACCOUNT_NOT_HAVE_REG_TOKEN: 'Account does not have a registration token',
+  REQUEST_ERROR_FROM_EMAIL_SERVICE: 'Error from email service',
+  REQUEST_ERROR_DELEGATION_FROM_BLOCKCHAIN: 'Delegation failed.'
+};
+
+exports.SMS_RESEND_LIMIT_MINS = 60;
+
+exports.PHONE_CHANGE_LIMIT_MINS = 60;
+
+const PROJECT_NAMES = {
+  BETTING: 'betting',
+  BLOG: 'blog'
+};
+
+exports.PROJECT_NAMES = PROJECT_NAMES;
+
+exports.PROJECT_PROD_REG_URLS = {
+  [PROJECT_NAMES.BETTING]: 'https://betscorum.com/registration',
+  [PROJECT_NAMES.BLOG]: 'https://scorum.com/registration'
+};
+
+exports.PROJECT_DEV_REG_URLS = {
+  [PROJECT_NAMES.BETTING]: 'https://bet-dev.scorum.com/registration',
+  [PROJECT_NAMES.BLOG]: 'https://blog-dev.scorum.com/registration'
+};

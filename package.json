@@ -1,0 +1,83 @@
+{
+  "name": "auth-ws",
+  "version": "1.0.11",
+  "description": "Auth web service for Scorum",
+  "main": "index.js",
+  "engines": {
+    "node": ">8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:scorum/blog-translations.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint -c ./.eslintrc .",
+    "test": "cross-env NODE_ENV=test nyc mocha './{,!(node_modules)/**}/*.spec.js' --exit",
+    "test:api": "mocha './tests/api/*.test.js' --file ./tests/api/setup.js --exit",
+    "test:report": "cross-env NODE_ENV=test nyc report"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run lint"
+    }
+  },
+  "nyc": {
+    "include": [
+      "controllers/**/*.js",
+      "helpers/**/*.js",
+      "middlewares/**/*.js",
+      "libs/**/*.js"
+    ],
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "sourceMap": false,
+    "instrument": true,
+    "all": true
+  },
+  "dependencies": {
+    "@scorum/scorum-js": "^2.3.0",
+    "authy": "^1.3.1",
+    "bluebird": "^3.5.0",
+    "colors": "^1.1.2",
+    "dotenv-safe": "^5.0.1",
+    "koa": "^2.4.1",
+    "koa-basic-auth": "^3.0.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-helmet": "^3.3.0",
+    "koa-router": "^7.3.0",
+    "koa-validate": "^1.0.7",
+    "koa2-cors": "^2.0.3",
+    "libphonenumber-js": "^1.2.15",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.11.8",
+    "ms": "^2.1.1",
+    "node-fetch": "^2.1.1",
+    "nodemailer": "^4.4.2",
+    "raven": "^2.6.3",
+    "twilio": "^3.13.1",
+    "uuid": "^3.2.1",
+    "winston": "^3.0.0-rc1",
+    "winston-sentry-raven-transport": "^1.0.1",
+    "winston-transport": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.5.0",
+    "eslint-plugin-security": "^1.4.0",
+    "faker": "^4.1.0",
+    "husky": "^0.15.0-rc.6",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
+    "prettier": "^1.5.3",
+    "supertest": "^3.1.0"
+  }
+}
